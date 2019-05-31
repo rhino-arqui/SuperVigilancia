@@ -20,7 +20,7 @@ public class TimerConsultarRentRecord {
     @EJB
     private RentRecordFacade rentRecordFacade;
 
-    @Schedule(dayOfWeek = "*", month = "*", hour = "*", dayOfMonth = "*", year = "*", minute = "*", second = "*/3", persistent = false)
+    @Schedule(dayOfWeek = "*", month = "*", hour = "*", dayOfMonth = "*", year = "*", minute = "*/2", second = "0", persistent = false)
     
     public void myTimer() {
         System.out.println("Timer event: " + new Date());
